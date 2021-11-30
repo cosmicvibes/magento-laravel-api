@@ -41,4 +41,16 @@ class Products extends AbstractApi
     {
         return $this->put('/products/'.$sku, $body);
     }
+
+
+    /**
+     * Delete product by the specified SKU.
+     *
+     * @param  string  $sku
+     * @return array
+     */
+    public function remove($sku)
+    {
+        return $this->delete('/products/'.$sku);
+    }
 }
